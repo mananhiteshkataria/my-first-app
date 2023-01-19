@@ -36,9 +36,9 @@ public class FirstApp {
 		
 		Employee[] employees= {emp1,emp2};
 		
-//		System.out.println("Id= "+emp1.getId());
-//		System.out.println("Name= "+emp1.getName());
-//		System.out.println("Salary= "+emp1.getSalary());
+		System.out.println("Id= "+emp1.getId());
+		System.out.println("Name= "+emp1.getName());
+		System.out.println("Salary= "+emp1.getSalary());
 		
 		for(Employee e:employees)
 		{
@@ -49,7 +49,13 @@ public class FirstApp {
 		}
 		// Abstraction Hides Complexity From The End User
 		
-		
-		
+		System.out.println("--First way of calling methods---");
+		DBOperation dbOperation= new OracleDbImpl();
+		dbOperation.store();
+		dbOperation.delete();
+		System.out.println("--Second way of calling methods---");
+		DBOperation dbOperation2=FactoryPattern.getDBInstance();
+		dbOperation2.store();
+		dbOperation2.delete();
 	}
 }
