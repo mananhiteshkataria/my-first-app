@@ -27,8 +27,4 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
-	
-	
-	
 }

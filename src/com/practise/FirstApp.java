@@ -1,5 +1,8 @@
 package com.practise;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.practise.factory.FactoryPattern2;
 
 public class FirstApp {
@@ -63,5 +66,18 @@ public class FirstApp {
 		DBOperation dbOperation3=FactoryPattern2.getDBInstance();
 		dbOperation3.store();
 		dbOperation3.delete();
+		
+		List<Integer> list= new ArrayList<Integer>();
+		list.add(3);
+		list.add(4);
+		list.add(2);
+		System.out.println(list);
+		list.remove(0);
+		System.out.println(list);
+		// two ways to remove particular value
+		// list.remove(new Integer(4));
+		// this is deprecated 
+		list.remove(Integer.valueOf(4));
+		System.out.println(list);
 	}
 }
