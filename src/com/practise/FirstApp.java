@@ -1,4 +1,6 @@
-package com.crisil;
+package com.practise;
+
+import com.practise.factory.FactoryPattern2;
 
 public class FirstApp {
 		// you can have 3 things
@@ -57,5 +59,9 @@ public class FirstApp {
 		DBOperation dbOperation2=FactoryPattern.getDBInstance();
 		dbOperation2.store();
 		dbOperation2.delete();
+		
+		DBOperation dbOperation3=FactoryPattern2.getDBInstance();
+		dbOperation3.store();
+		dbOperation3.delete();
 	}
 }

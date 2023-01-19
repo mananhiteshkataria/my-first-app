@@ -1,4 +1,4 @@
-package com.crisil;
+package com.practise;
 
 public class FactoryPattern {
 public static DBOperation getDBInstance(){
